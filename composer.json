@@ -1,0 +1,13 @@
+{
+    "name": "stablepoint/hcl-generator",
+    "description": "Library for generating HCL snippets",
+    "type": "library",
+    "license": "Mozilla Public License 2.0",
+    "authors": [
+        {
+            "name": "Stablepoint Ltd",
+            "email": "bruce@stablepoint.com"
+        }
+    ],
+    "require": {}
+}
