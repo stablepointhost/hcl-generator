@@ -9,5 +9,10 @@
             "email": "bruce@stablepoint.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "Sablepoint": "src/"
+        }
+    }
 }
