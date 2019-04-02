@@ -68,14 +68,21 @@ class HclGenerator
            }
            else
            {
-                $this->output .= '    ' . $k . ' {' . PHP_EOL;
-                foreach($v as $k2=>$v2)
+                if(is_int(key($v)))
                 {
-                    $this->output .= '    ';
-                    $this->addArgumentLine([$k2=>$v2]);
+                    $this->addArgumentLine([$k=>$v]);
                 }
+                else
+                {
+                    $this->output .= '    ' . $k . ' {' . PHP_EOL;
+                    foreach($v as $k2=>$v2)
+                    {
+                        $this->output .= '    ';
+                        $this->addArgumentLine([$k2=>$v2]);
+                    }
 
-                $this->output .= '    }' . PHP_EOL;
+                    $this->output .= '    }' . PHP_EOL;
+                }
            }
         }
     }
