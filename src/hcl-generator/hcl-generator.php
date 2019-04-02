@@ -7,11 +7,11 @@ Namespace Stablepoint;
 
 class HclGenerator
 {
-    public  $type;
-    public  $provider;
-    public  $name;
-    public  $objectName;
-    private $output;
+    protected $type;
+    protected $provider;
+    protected $name;
+    protected $objectName;
+    protected $output;
     public function __construct($provider, $name, $type='resource')
     {
         $this->type       = $type;
