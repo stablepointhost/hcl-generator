@@ -29,9 +29,10 @@ class HclGenerator
         return $this->output;
     }
 
-    public function generateAttribute($attribute, bool $rendered=true)
+    public function generateAttribute($attribute, $object=null, bool $rendered=true)
     {
-        $attributeFullName = "{$this->objectName}.$attribute";
+        $object = isset($object) ? $object : $this->objectName;
+        $attributeFullName = "$object.$attribute";
 
         if($rendered == false)
         {
