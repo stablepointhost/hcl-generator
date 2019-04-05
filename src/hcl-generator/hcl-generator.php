@@ -24,7 +24,7 @@ class HclGenerator
 
     public function renderConfig()
     {
-        $this->output .= '}';
+        $this->output .= '}' . PHP_EOL;
 
         return $this->output;
     }
