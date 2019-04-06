@@ -86,4 +86,10 @@ class HclGenerator
            }
         }
     }
+
+    public function generateOutput($object, $name, $attribute)
+    {
+        $this->output = json_encode('output') . ' ' . json_encode("$name") . '{' . PHP_EOL;
+        $this->output .= 'value = ' . generateAttribute($attribute, $object);
+    }
 } 
