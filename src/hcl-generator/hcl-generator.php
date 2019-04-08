@@ -41,7 +41,7 @@ class HclGenerator
         // If someone has defined output, add it on.
         if(isset($this->output))
         {
-            $this->config .= json_encode('output') . ' ' . json_encode($this->output['name']);
+            $this->config .= 'output ' . json_encode($this->output['name']) .' {' . PHP_EOL;
             $this->config .= '    value = ' . json_encode($this->output['value']) . PHP_EOL;
             $this->config .= '}' . PHP_EOL;
         }
